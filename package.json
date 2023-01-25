@@ -26,7 +26,8 @@
     "start:chain": "ganache-cli -p 7545",
     "test": "yarn truffle test",
     "generate-types": "typechain --target=ethers-v5 'build/contracts/*.json'",
-    "postinstall": "truffle compile && yarn generate-types"
+    "postinstall": "truffle compile && yarn generate-types",
+    "migrate": "truffle migrate --network dotEnvNetwork"
   },
   "repository": {
     "type": "git",
@@ -86,11 +87,11 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.2.0",
+    "@truffle/hdwallet-provider": "^2.1.5",
     "crypto": "^1.0.1",
     "ethereumjs-wallet": "^0.6.3",
     "truffle": "5.4.5",
     "truffle-contract-size": "^2.0.1",
-    "truffle-hdwallet-provider": "1.0.1",
     "truffle-plugin-verify": "^0.5.19"
   },
   "resolutions": {
