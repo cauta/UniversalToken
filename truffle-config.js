@@ -57,7 +57,7 @@ module.exports = {
       gasPrice: 0x00,
     },
   },
-  plugins: ["solidity-coverage", "truffle-contract-size", "truffle-plugin-verify"],
+  plugins: ["solidity-coverage", "truffle-contract-size", "truffle-plugin-verify", "truffle-plugin-blockscout-verify"],
   compilers: {
     solc: {
       version: '0.8.7',
